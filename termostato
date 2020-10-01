@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib as matplot
+import matplotlib.pyplot as plt
+
+def e_t (t):
+    
+    x = (38.74*t + 3.319*(10**-2)*t**2 + 2.071*(10**-4)*t**3 - 2.195*(10**-6)*t**4)
+    return x
+    
+ T = np.array([0, 50, 100, 150, 200, 230, 250, 280, 300, 330, 350, 380, 400])
+
+ddp = e_t(T)
+
+plt.plot(T,ddp)
+plt.xlabel('Temperatura (ºC)')
+plt.ylabel('Tensão (uV)')
+plt.show()
